@@ -35,6 +35,11 @@ OnlyIcon.args = {
   color: 'is-success'
 }
 
+export const FullScreen = Template.bind({});
+OnlyIcon.args = {
+  isFullwidth: true,
+}
+
 export const WithChildren: ComponentStory<typeof Button> = (args) => (
   <Button {...args}>
     <span style={{ marginRight: '10px' }}>Label Children</span>
