@@ -36,8 +36,13 @@ OnlyIcon.args = {
 }
 
 export const FullScreen = Template.bind({});
-OnlyIcon.args = {
+FullScreen.args = {
   isFullwidth: true,
+}
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  isDisabled: true,
 }
 
 export const WithChildren: ComponentStory<typeof Button> = (args) => (
