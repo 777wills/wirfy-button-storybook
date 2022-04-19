@@ -39,9 +39,9 @@
   },
   "scripts": {
     "start": "npm run storybook",
-    "build": "npm run clean && npm run build-storybook && npm run rename && tsc && npm run copy-files",
+    "build": "npm run clean && tsc && npm run copy-files",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook && npm run rename",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.scss dist/",
     "rename": "renamer --find storybook-static --replace docs *"
