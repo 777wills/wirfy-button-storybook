@@ -57,7 +57,6 @@ export const Button = ({
       {icon && <span className={iconClasses}>{icon}</span>}
       {text && <span>{text}</span>}
       {children}
-      Hola a todos
     </button>
   );
 };
