@@ -19,7 +19,7 @@ type stateButton = 'is-active' | 'is-focused' | 'is-hovered';
 
 export interface IButton {
   /**
-   * Elementsssss or components that go inside the button
+   * Elements or components that go inside the button
    */
   children?: string | ReactElement | ReactElement[];
   /**
