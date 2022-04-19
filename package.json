@@ -1,7 +1,28 @@
 {
   "name": "wirfy-button-storybook",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "homepage": "https://wirvi.com",
+  "repository": {
+    "url": "https://github.com/777wills/wirfy-button-storybook",
+    "type": "git"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "typescript": ">=4.6.3"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -12,16 +33,18 @@
     "@types/react-dom": "^18.0.1",
     "bulma": "^0.9.3",
     "classnames": "^2.3.1",
-    "react": "^18.0.0",
+    "react": ">=18",
     "react-dom": "^18.0.0",
-    "typescript": "^4.6.3",
+    "typescript": ">=4.6.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "npm run storybook",
-    "build": "build-storybook",
+    "build": "npm run clean && tsc && npm run copy-files",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.scss dist/"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +73,18 @@
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.9",
     "babel-loader": "^8.2.4",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.50.0",
+    "semantic-release": "^19.0.2",
     "storybook-addon-sass-postcss": "^0.1.1"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { Header } from './Header';
 import './page.scss';
 
-type User = {
+export type User = {
   name: string;
 };
 
