@@ -48,5 +48,5 @@ WithChildren.args = {
 export const WithLoading = Template.bind({});
 WithLoading.args = {
   isLoading: true,
-  text: 'Hello Word!'
+  text: 'Hello Word!!'
 }
