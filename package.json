@@ -34,8 +34,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook && npm run rename",
     "clean": "rimraf dist/",
-    "copy-files": "copyfiles -u 1 src/**/*.scss dist/",
-    "rename": "renamer --find storybook-static --replace docs *"
+    "rename": "renamer --find storybook-static --replace docs *",
+    "copy-files": "copyfiles -u 1 src/**/*.scss dist/"
   },
   "eslintConfig": {
     "extends": [
