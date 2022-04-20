@@ -38,6 +38,7 @@ OnlyIcon.args = {
 export const FullScreen = Template.bind({});
 FullScreen.args = {
   isFullwidth: true,
+  text: 'Boón Full Screen'
 }
 
 export const Disabled = Template.bind({});
