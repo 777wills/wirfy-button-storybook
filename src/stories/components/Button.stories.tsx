@@ -26,7 +26,7 @@ TextChildren.args = {
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   icon: <Icon />,
-  text: 'Hello Word!'
+  text: 'Hello Word!!!!'
 }
 
 export const OnlyIcon = Template.bind({});
