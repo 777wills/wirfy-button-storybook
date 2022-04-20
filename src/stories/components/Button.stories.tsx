@@ -43,6 +43,7 @@ FullScreen.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
   isDisabled: true,
+  text: 'Mi botón'
 }
 
 export const WithChildren: ComponentStory<typeof Button> = (args) => (
